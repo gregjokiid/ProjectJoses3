@@ -1,8 +1,7 @@
 <resources>
     <string name="app_name">MCSJoses</string>
     <string name="tab_text_1">Home</string>
-    <string name="tab_text_2">Profile</string>
-    <string name="tab_text_3">Setting</string>
+    <string name="tab_text_2">Token</string>
     <string name="content_tab_home">Welcome Home</string>
     <string name="content_tab_profile">Change your Profile here</string>
     <string name="content_tab_text">This is Tab %1$d</string>

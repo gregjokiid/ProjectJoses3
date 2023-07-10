@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.mcsjoses.HomeFragment;
-import com.example.mcsjoses.ProfileFragment;
+import com.example.mcsjoses.TokenFragment;
 
 public class SectionsPagerAdapter extends FragmentStateAdapter {
 
@@ -23,7 +23,7 @@ public class SectionsPagerAdapter extends FragmentStateAdapter {
                 fragment = new HomeFragment();
                 break;
             case 1:
-                fragment = new ProfileFragment();
+                fragment = new TokenFragment();
                 break;
         }
         return fragment;
