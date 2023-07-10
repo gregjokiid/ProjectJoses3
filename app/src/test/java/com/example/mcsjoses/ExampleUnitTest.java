@@ -1,4 +1,4 @@
-package com.example.mcsjoses.mytablayout;
+package com.example.mcsjoses;
 
 import org.junit.Test;
 
