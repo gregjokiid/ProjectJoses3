@@ -1,4 +1,4 @@
-package com.dicoding.picodiploma.mytablayout;
+package com.example.mcsjoses;
 
 import android.os.Bundle;
 
