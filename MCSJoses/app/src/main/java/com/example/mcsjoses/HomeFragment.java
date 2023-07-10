@@ -60,11 +60,11 @@ public class HomeFragment extends Fragment {
 
     private void ShowNews(Json news) {
         Intent directintent = new Intent(getContext(), DetailActivity.class);
-        Toast.makeText(getContext(), news.getId(), Toast.LENGTH_SHORT).show();
-//        directintent.putExtra("news_image", news.getNewsImage());
-//        directintent.putExtra("news_title", news.getNewsTitle());
-//        directintent.putExtra("news_author", news.getNewsAuthor());
-//        directintent.putExtra("news_detail", news.getNewsDetail());
+        Toast.makeText(getContext(), String.valueOf(news.getId()), Toast.LENGTH_SHORT).show();
+        directintent.putExtra("userId", String.valueOf(news.getUserId()));
+        directintent.putExtra("id", String.valueOf(news.getId()));
+        directintent.putExtra("title", news.getTitle());
+        directintent.putExtra("body", news.getBody());
         startActivity(directintent);
     }
 }
