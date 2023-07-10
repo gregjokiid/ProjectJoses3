@@ -45,13 +45,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ListViewHolder
     @Override
     public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         Data medicine = medicineList.get(position);
-        Glide.with(holder.itemView.getContext())
-                .load((medicine.getImage()))
-                .apply(new RequestOptions().override(55,55))
-                .into(holder.imgPhoto);
-        holder.tvName.setText(medicine.getName());
-        holder.tvManufacturer.setText(medicine.getManufacturer());
-        holder.tvPrice.setText(medicine.getPrice());
+        holder.tvUserId.setText(medicine.getUserId());
+        holder.tvId.setText(medicine.getId());
+        holder.tvTitle.setText(medicine.getTitle());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,15 +63,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ListViewHolder
     }
 
     public static class ListViewHolder extends RecyclerView.ViewHolder {
-        ImageView imgPhoto;
-        TextView tvName, tvManufacturer, tvPrice;
+        TextView tvUserId, tvId, tvTitle;
 
         public ListViewHolder(@NonNull View itemView) {
             super(itemView);
-            imgPhoto = itemView.findViewById(R.id.img_item_photo);
-            tvName = itemView.findViewById(R.id.tv_item_name);
-            tvManufacturer = itemView.findViewById(R.id.tv_item_manufacturer);
-            tvPrice = itemView.findViewById(R.id.tv_item_price);
+            tvUserId = itemView.findViewById(R.id.tv_item_userId);
+            tvId = itemView.findViewById(R.id.tv_item_id);
+            tvTitle = itemView.findViewById(R.id.tv_item_title);
         }
     }
 
