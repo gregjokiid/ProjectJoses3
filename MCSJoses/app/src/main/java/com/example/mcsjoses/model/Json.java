@@ -35,4 +35,13 @@ public class Json {
     public void setBody(String body) {
         this.body = body;
     }
+
+    public Json(int userId, int id, String title, String body){
+        this.userId = userId;
+        this.id = id;
+        this.title = title;
+        this.body = body;
+    }
+
+    public Json(){}
 }
