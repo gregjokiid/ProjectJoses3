@@ -41,7 +41,7 @@ public class JsonAdapter extends RecyclerView.Adapter<com.example.mcsjoses.adapt
     @Override
     public void onBindViewHolder(@NonNull final com.example.mcsjoses.adapter.JsonAdapter.ListViewHolder holder, int position) {
         Json news = newsList.get(position);
-        holder.tvId.setText(news.getId());
+        holder.tvId.setText(String.valueOf(news.getId()));
         holder.tvTitle.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
         holder.tvTitle.setText(news.getTitle());
 
