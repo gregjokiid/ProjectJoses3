@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332134002834",
+    "project_id": "mcs-joses",
+    "storage_bucket": "mcs-joses.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332134002834:android:723b2011303e25697b364b",
+        "android_client_info": {
+          "package_name": "com.example.mcsjoses"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332134002834-3ndmsmssai3ahp3p5dfbh0jjjtnk5gtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZd_ghYjFIJo2ZONwRFyPXlkFYkTKWSL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332134002834-3ndmsmssai3ahp3p5dfbh0jjjtnk5gtp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
