@@ -1,5 +1,6 @@
 package com.example.mcsjoses;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,7 +66,7 @@ public class HomeFragment extends Fragment {
         newsAdapter.setOnItemClickCallBack(new JsonAdapter.OnItemClickCallBack() {
             @Override
             public void onItemClicked(Json data) {
-                showNews(data);
+                ShowNews(data);
             }
         });
     }
@@ -112,8 +113,14 @@ public class HomeFragment extends Fragment {
         requestQueue.add(request);
     }
 
-    private void showNews(Json news) {
-        // Implement your logic to show the news details
+    private void ShowNews(Json news) {
+        Intent directintent = new Intent(getContext(), DetailActivity.class);
+        Toast.makeText(getContext(), String.valueOf(news.getId()), Toast.LENGTH_SHORT).show();
+        directintent.putExtra("userId", String.valueOf(news.getUserId()));
+        directintent.putExtra("id", String.valueOf(news.getId()));
+        directintent.putExtra("title", news.getTitle());
+        directintent.putExtra("body", news.getBody());
+        startActivity(directintent);
     }
 
     @Override
