@@ -29,8 +29,8 @@ public class DetailActivity extends AppCompatActivity {
         String title = getIntent().getStringExtra("title");
         String body = getIntent().getStringExtra("body");
 
-        tvUserId.setText(userId);
-        tvId.setText(id);
+        tvUserId.setText("User Id : " + userId);
+        tvId.setText("Id : " + id);
         tvTitle.setText(title);
         tvBody.setJustificationMode(Layout.JUSTIFICATION_MODE_INTER_WORD);
         tvBody.setText(body);
