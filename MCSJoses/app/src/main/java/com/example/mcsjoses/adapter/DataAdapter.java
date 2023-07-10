@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.mcsjoses.R;
 import com.example.mcsjoses.model.Data;
 
 import java.util.ArrayList;
@@ -34,16 +35,16 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ListViewHolder
 
     @NonNull
     @Override
-    public MedicineAdapter.ListViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_row_medicine, viewGroup, false);
-        return new MedicineAdapter.ListViewHolder(view);
+    public DataAdapter.ListViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_row_data, viewGroup, false);
+        return new DataAdapter.ListViewHolder(view);
     }
 
     @SuppressLint("WrongConstant")
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
-        Medicine medicine = medicineList.get(position);
+        Data medicine = medicineList.get(position);
         Glide.with(holder.itemView.getContext())
                 .load((medicine.getImage()))
                 .apply(new RequestOptions().override(55,55))
@@ -79,6 +80,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ListViewHolder
     }
 
     public interface OnItemClickCallBack {
-        void onItemClicked(Medicine data);
+        void onItemClicked(Data data);
     }
 }
